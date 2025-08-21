@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Не задавайте мета-вопросов</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Roboto+Condensed:wght@400;700&display=swap');
+
+    body {
+      background: #0a0a0a url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23111"/><path d="M0 0L100 100M100 0L0 100" stroke="%23222" stroke-width="0.5"/></svg>');
+      color: #e0e0e0;
+      font-family: 'Roboto Condensed', sans-serif;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Orbitron', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .titan-gradient {
+      background: linear-gradient(135deg, #2b2b2b, #444444, #2b2b2b);
+      background-size: 200% 200%;
+      animation: gradientShift 8s ease infinite;
+    }
+
+    .glow {
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    }
+
+    .card {
+      background: rgba(30, 30, 30, 0.7);
+      border: 1px solid rgba(100, 100, 100, 0.3);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), 0 0 10px rgba(100, 100, 100, 0.2);
+      backdrop-filter: blur(4px);
+    }
+
+    .hover-glow:hover {
+      box-shadow: 0 0 12px rgba(100, 200, 255, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .metal-texture {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="%231a1a1a"/><path d="M0 0L200 200M200 0L0 200" stroke="%232a2a2a" stroke-width="0.5"/></svg>');
+      background-size: 200px 200px;
+    }
+
+    .arrow {
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      background: linear-gradient(135deg, #333, #555);
+      border: 1px solid #666;
+      box-shadow: 0 0 8px rgba(100, 150, 200, 0.3);
+      transform: rotate(0deg);
+      transition: all 0.3s ease;
+    }
+
+    .arrow::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -15px;
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 15px solid #555;
+      transform: translateY(-50%);
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .glow-text {
+      animation: textGlow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes textGlow {
+      0% { text-shadow: 0 0 5px #aaa, 0 0 10px #aaa; }
+      100% { text-shadow: 0 0 10px #fff, 0 0 20px #fff; }
+    }
+  </style>
+</head>
+<body class="text-gray-200">
+
+  <!-- Header -->
+  <header class="titan-gradient text-center py-6 px-4 border-b border-gray-700 shadow-lg">
+    <h1 class="text-3xl md:text-4xl font-extrabold glow-text">Пожалуйста, не задавайте мета-вопросов в чате!</h1>
+    <div class="mt-4 flex flex-wrap justify-center gap-4 text-sm">
+      <a href="https://t.me/ScooterShark" target="_blank" class="text-gray-300 hover:text-white transition flex items-center gap-1">
+        <i class="fab fa-telegram"></i> Telegram
+      </a>
+      <a href="https://tiktok.com/@scootershark" target="_blank" class="text-gray-300 hover:text-white transition flex items-center gap-1">
+        <i class="fab fa-tiktok"></i> TikTok
+      </a>
+      <a href="https://t.me/Coffee_W1th_Milk" target="_blank" class="text-gray-300 hover:text-white transition flex items-center gap-1">
+        <i class="fab fa-telegram"></i> Личный Telegram
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto p-6 space-y-10">
+    <!-- Bad Questions -->
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold text-center mb-6">Почему это плохо?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="card p-5 rounded-lg">
+          <p class="text-red-400 font-bold">➝ «Можно ли задать вопрос?»</p>
+          <p class="mt-2">Вы теряете время и рискуете не получить ответ вообще.</p>
+        </div>
+        <div class="card p-5 rounded-lg">
+          <p class="text-red-400 font-bold">➝ «Есть, кто разбирается в N?»</p>
+          <p class="mt-2">Неясно, что именно вам нужно. Люди могут проигнорировать.</p>
+        </div>
+        <div class="card p-5 rounded-lg">
+          <p class="text-red-400 font-bold">➝ «А кто-нибудь тут проходил курс…?»</p>
+          <p class="mt-2">Слишком общий запрос. Многие пропустят мимо.</p>
+        </div>
+        <div class="card p-5 rounded-lg">
+          <p class="text-red-400 font-bold">➝ «Ребят, есть вопросик по %framework_name%»</p>
+          <p class="mt-2">Слишком мягко. Лучше сразу суть.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Infographic -->
+    <section class="text-center my-10">
+      <h2 class="text-2xl font-bold mb-6">Как правильно?</h2>
+      <div class="flex flex-col items-center space-y-4">
+        <div class="arrow">Привет → тратится время</div>
+        <div class="text-3xl">↓</div>
+        <div class="arrow">Сразу вопрос → продуктивность</div>
+      </div>
+    </section>
+
+    <!-- Explanation Cards -->
+    <section class="space-y-6">
+      <h2 class="text-2xl font-bold text-center">Почему так лучше?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card p-5 rounded-lg hover-glow">
+          <h3 class="font-bold text-lg mb-2 text-cyan-300">Экономия времени</h3>
+          <p>Вы сразу получаете ответ, без лишних уточнений.</p>
+        </div>
+        <div class="card p-5 rounded-lg hover-glow">
+          <h3 class="font-bold text-lg mb-2 text-cyan-300">Больше откликов</h3>
+          <p>Люди чаще отвечают на конкретные вопросы.</p>
+        </div>
+        <div class="card p-5 rounded-lg hover-glow">
+          <h3 class="font-bold text-lg mb-2 text-cyan-300">Уважение к участникам</h3>
+          <p>Вы цените чужое время и показываете серьёзность.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="titan-gradient border-t border-gray-700 py-6 px-4 text-center text-sm text-gray-400 space-y-2">
+    <p>© 2025 Coffee With M1lk. Все права защищены.</p>
+  </footer>
+
+</body>
+</html>
